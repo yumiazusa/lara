@@ -41,6 +41,11 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+$app->singleton(
+    Illuminate\Contracts\Debug\ExceptionHandler::class,
+    Modules\Common\Exceptions\Handler::class
+);
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application
